@@ -13,14 +13,21 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @Column(name = "accountName", nullable = false)
     private String accountName;
 
     @NotNull
+    @Column(name = "startBalance", nullable = false)
     private BigDecimal startBalance;
 
+    @NotNull
+    @Column(name = "actualBalance", nullable = false)
     private BigDecimal actualBalance;
 
     @Enumerated(EnumType.STRING)
+    @NotNull
+    @Column(name = "type", nullable = false)
     private AccountType accountType;
 
     public Long getId() {
