@@ -8,5 +8,7 @@ public enum AccountType {
     INVESTMENT,
     PIGGYBANK,
     CREDIT,
-    SHARED
+    SHARED,
+    RETIREMENT
+
 }

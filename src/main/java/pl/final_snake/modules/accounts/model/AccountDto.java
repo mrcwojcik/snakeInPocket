@@ -9,9 +9,11 @@ import java.math.BigDecimal;
 public class AccountDto {
 
     private Long id;
+    @NotNull
     private String accountName;
     @NotNull
     private BigDecimal startBalance;
+    @NotNull
     private AccountType accountType;
     private BigDecimal actualBalance;
 
