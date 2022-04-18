@@ -19,7 +19,6 @@ public class AccountController {
 
     @PostMapping ("/account/add")
     public Account addAccount(@RequestBody AccountDto accountDto){
-        System.out.println(accountDto.toString());
         return accountService.addAccount(accountDto);
     }
 
@@ -40,7 +39,6 @@ public class AccountController {
 
     @GetMapping("/account/delete/{id}")
     public List<Account> deleteAccount(@PathVariable long id) {
-        System.out.println("uderzam");
         accountService.deleteAccount(id);
         return accountService.getAllAccounts();
     }
